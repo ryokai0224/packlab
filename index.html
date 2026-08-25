@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>環境配慮型 テイクアウト容器カタログ | イージス・ワークス株式会社</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #E8F5E9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-color: #F7F9FA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: var(--white);
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background-color: var(--secondary-color);
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #EAEAEA;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #E0E0E0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .product-model {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .spec-list {
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .spec-list li {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #EEEEEE;
+            padding-bottom: 4px;
+        }
+
+        .spec-label {
+            color: var(--text-light);
+        }
+
+        .spec-value {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333333;
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px 40px;
+            margin-top: 40px;
+        }
+
+        .cta-box {
+            background-color: var(--white);
+            color: var(--text-main);
+            max-width: 600px;
+            margin: -100px auto 40px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-box h2 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .cta-box p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1B5E20;
+        }
+
+        .footer-info {
+            font-size: 0.9rem;
+            color: #AAAAAA;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.6rem; }
+            .features { flex-direction: column; align-items: center; }
+            .feature-item { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>環境配慮型 テイクアウト容器シリーズ</h1>
+        <p>イージス・ワークス株式会社がご提案する、トウモロコシ澱粉基材を使用したサステナブルな高品質フードコンテナ。</p>
+    </header>
+
+    <section class="features">
+        <div class="feature-item">🌱 トウモロコシ澱粉基材（環境配慮素材）</div>
+        <div class="feature-item">🌡️ 耐熱温度 0〜90℃</div>
+        <div class="feature-item">📦 長期保存対応（品質保証18ヶ月）</div>
+    </section>
+
+    <section class="container">
+        <div class="text-center">
+            <h2 class="section-title">製品ラインナップ</h2>
+        </div>
+        
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="四格餐盒B">
+                <div class="product-info">
+                    <div class="product-title">四格餐盒B</div>
+                    <div class="product-model">型番: DRH-4G-B</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">230 × 202 × 45 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">200 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">66.5 × 42 × 47.5 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="二格餐盒">
+                <div class="product-info">
+                    <div class="product-title">二格餐盒</div>
+                    <div class="product-model">型番: DRH-2G-156</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">248 × 220 × 44 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">200 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">57.5 × 33 × 49.5 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="圆碗1000">
+                <div class="product-info">
+                    <div class="product-title">丸型ボウル 1000ml</div>
+                    <div class="product-model">型番: DRH-1000ML</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">77 × 177 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">200 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">67.5 × 36 × 37 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="三格餐盒B">
+                <div class="product-info">
+                    <div class="product-title">三格餐盒B</div>
+                    <div class="product-model">型番: DRH-3G-B</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">215 × 187 × 46 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">200 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">63.5 × 40 × 45 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="1250桶">
+                <div class="product-info">
+                    <div class="product-title">丸型容器 1250ml</div>
+                    <div class="product-model">型番: DRH-T1250</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">93 × 190 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">100 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">58 × 29 × 40 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="1500桶">
+                <div class="product-info">
+                    <div class="product-title">丸型容器 1500ml</div>
+                    <div class="product-model">型番: DRH-T1500</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">110 × 190 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">100 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">58 × 34 × 40 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="便当盒3格">
+                <div class="product-info">
+                    <div class="product-title">便当盒3格 (Bタイプ)</div>
+                    <div class="product-model">型番: DRH-B3</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">235 × 93 × 45 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">300 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">56 × 30 × 49 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="https://via.placeholder.com/400x300/F0F0F0/999999?text=Photo+Here" alt="2500盆">
+                <div class="product-info">
+                    <div class="product-title">丸型盆 2500ml</div>
+                    <div class="product-model">型番: DRH-P2500</div>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">製品寸法</span><span class="spec-value">93 × 275 mm</span></li>
+                        <li><span class="spec-label">1箱の入数</span><span class="spec-value">100 セット</span></li>
+                        <li><span class="spec-label">外箱サイズ</span><span class="spec-value">65 × 28.5 × 55.5 cm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="cta-box">
+            <h2>見積もり・追加サンプル依頼</h2>
+            <p>ご指定のロット数に応じたお見積もりや、本カタログ掲載製品の追加サンプルをご希望の方はお気軽にお問い合わせください。</p>
+            <a href="mailto:info@example.com?subject=テイクアウト容器のお問い合わせ" class="btn">✉️ お問い合わせはこちら</a>
+        </div>
+
+        <div class="footer-info">
+            <p><strong>イージス・ワークス株式会社</strong></p>
+            <p>&copy; 2026 Aegis Works Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
